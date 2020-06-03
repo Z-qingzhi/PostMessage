@@ -5,5 +5,5 @@ npm install
 
 ## 启动
 ```
-npm install
+node server.js
 ```
