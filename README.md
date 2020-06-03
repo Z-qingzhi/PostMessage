@@ -1,5 +1,5 @@
 ## 启动
-###1.进入express1文件夹 安装依赖
+### 1.进入express1文件夹 安装依赖
 ```
 npm install
 
@@ -10,7 +10,7 @@ npm install
 node server.js
 ```
 
-###2.进入express2文件夹 安装依赖
+### 2.进入express2文件夹 安装依赖
 ```
 npm install
 
@@ -23,4 +23,4 @@ node server.js
 
 ### 打开浏览器查看
 
-###http://localhost:3000/iframe1.html
+### http://localhost:3000/iframe1.html
