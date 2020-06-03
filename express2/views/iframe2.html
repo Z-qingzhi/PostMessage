@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>子页面</title>
+    <script src="jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div>我是子页面</div>
+    <input type="text" id="data1"/>
+    <button id="transfer">传递给父页面</button>
+</body>
+</html>
+<script>
+    //传递数据到父页面
+    $("#transfer").on("click",function(){
+        window.parent.postMessage({
+            type:"ctof",
+            data:$("#data1").val()
+        }, '*');
+    })
+    //接收父页面的数据
+    window.addEventListener("message", function(event){
+        if(event.data.type=='ftoc'){
+            $("#data1").val(event.data.data)
+        }
+    }, false);
+</script>
